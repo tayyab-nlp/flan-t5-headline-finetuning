@@ -24,6 +24,7 @@ flan-t5-headline-finetuning/
 ├── train.py
 ├── inference.py
 ├── requirements.txt
+├── requirements-train.txt
 ├── README.md
 ├── .gitignore
 ├── src/
@@ -56,6 +57,7 @@ python3 app.py
 ## Train Locally
 
 ```bash
+pip install -r requirements-train.txt
 python3 train.py --train_samples 10000 --validation_samples 1000 --num_train_epochs 1
 ```
 

@@ -1,6 +1,4 @@
-transformers
-datasets
-torch
 gradio
+torch
+transformers
 sentencepiece
-accelerate
