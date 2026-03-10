@@ -1,6 +1,6 @@
 # FLAN-T5 Fine-Tuning for News-to-Headline Generation
 
-Space Demo Link: _to be added after deployment_
+Space Demo Link: [https://vtayyab6-flan-t5-headline-finetuning.hf.space](https://vtayyab6-flan-t5-headline-finetuning.hf.space)
 
 Fine-tune FLAN-T5-Small on Gigaword to convert news-style input text into concise headline outputs, then serve it through a fast Gradio interface.
 
