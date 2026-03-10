@@ -21,7 +21,17 @@ class HeadlineGenerator:
     def __init__(self, model_name_or_path: str | None = None):
         resolved = self._resolve_model_id(model_name_or_path)
         self.model_id = resolved
-        self.tokenizer, self.model = load_model_and_tokenizer(resolved)
+        self.load_warning = ""
+        try:
+            self.tokenizer, self.model = load_model_and_tokenizer(resolved)
+        except Exception as exc:
+            # Keep the app responsive if remote model loading fails temporarily.
+            self.model_id = DEFAULT_BASE_MODEL
+            self.load_warning = (
+                f"Could not load `{resolved}`; using `{DEFAULT_BASE_MODEL}`. "
+                f"Reason: {exc}"
+            )
+            self.tokenizer, self.model = load_model_and_tokenizer(DEFAULT_BASE_MODEL)
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model.to(self.device)
 
@@ -74,11 +84,14 @@ class HeadlineGenerator:
 
     def info(self) -> Dict[str, str]:
         """Return model metadata for UI display."""
-        return {
+        details = {
             "loaded_model": self.model_id,
             "device": self.device,
             "base_fallback": DEFAULT_BASE_MODEL,
         }
+        if self.load_warning:
+            details["load_warning"] = self.load_warning
+        return details
 
 
 _GENERATOR: HeadlineGenerator | None = None

@@ -72,6 +72,8 @@ def run_generation(news_text: str, max_new_tokens: int, num_beams: int) -> Tuple
             f"- Beams: `{num_beams}`",
         ]
     )
+    if info.get("load_warning"):
+        details = f"{details}\n- Warning: {info['load_warning']}"
 
     return headline, status, details
 
