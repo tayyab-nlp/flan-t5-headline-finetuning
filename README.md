@@ -1,50 +1,70 @@
 # FLAN-T5 Fine-Tuning for News-to-Headline Generation
 
 Space Demo Link: [https://vtayyab6-flan-t5-headline-finetuning.hf.space](https://vtayyab6-flan-t5-headline-finetuning.hf.space)
-Fine-Tuned Model: [https://huggingface.co/vtayyab6/flan-t5-small-gigaword-headline-ft](https://huggingface.co/vtayyab6/flan-t5-small-gigaword-headline-ft)
 
-Fine-tune FLAN-T5-Small on Gigaword to convert news-style input text into concise headline outputs, then serve it through a fast Gradio interface.
+Model Link: [https://huggingface.co/vtayyab6/flan-t5-small-gigaword-headline-ft](https://huggingface.co/vtayyab6/flan-t5-small-gigaword-headline-ft)
+
+A lightweight NLP project that turns news-style text into clean headline outputs using FLAN-T5 fine-tuned on Gigaword, with a fast Gradio demo for real-time testing.
 
 ## Features
 
 | Area | Details |
 |---|---|
-| Task | News sentence/paragraph -> short headline generation |
-| Model | `google/flan-t5-small` (uses fine-tuned checkpoint if available) |
-| Dataset | Hugging Face Gigaword |
-| Training | Lightweight `train.py` with configurable sample size |
-| Inference | Reusable `generate_headline()` pipeline in `inference.py` |
-| UI | Gradio app with input box, generate button, examples, and decoding controls |
-| Deployment | Hugging Face Spaces ready |
-| Fine-tuned outputs in repo | `outputs/training_summary.json` and `outputs/sample_predictions.json` |
+| Task | News sentence/paragraph -> concise headline |
+| Dataset | `SalmanFaroz/gigaword` (`article` -> `summary`) |
+| Fine-tuning | `train.py` with configurable subsampling for quick runs |
+| Inference | Reusable `generate_headline()` function in `inference.py` |
+| UI | Gradio interface with sample inputs and generation controls |
+| Deployment | Live Hugging Face Space + published fine-tuned model |
+| Saved Results | `outputs/training_summary.json` and `outputs/sample_predictions.json` |
+
+## Screenshots
+
+Before running:
+
+![Before run](screenshots/1.%20before%20run.png)
+
+Generation settings:
+
+![Generation settings](screenshots/2.%20generation%20settings.png)
+
+Sample headline generation:
+
+![Sample generation](screenshots/3.%20sample%20generation.png)
+
+Run details (model/device/decoding):
+
+![Run details](screenshots/4.%20run%20details.png)
 
 ## Project Structure
 
 ```text
 flan-t5-headline-finetuning/
 ├── app.py
-├── train.py
 ├── inference.py
+├── train.py
 ├── requirements.txt
 ├── requirements-train.txt
 ├── README.md
 ├── .gitignore
 ├── src/
-│   ├── __init__.py
 │   ├── data_preprocessing.py
 │   ├── model_utils.py
 │   └── utils.py
-└── outputs/
-    └── saved_model/
+├── outputs/
+│   ├── training_summary.json
+│   ├── sample_predictions.json
+│   └── saved_model/
+└── screenshots/
 ```
 
 ## How It Works
 
-1. Load Gigaword (`article`, `summary`) from `SalmanFaroz/gigaword`.
-2. Format input as `headline: <news text>` and target as `<headline>`.
-3. Fine-tune FLAN-T5-Small.
-4. Save model and tokenizer to `outputs/saved_model`.
-5. Run Gradio app and generate headlines from new inputs.
+1. Load Gigaword and format each row as `headline: <article>` -> `<summary>`.
+2. Fine-tune `google/flan-t5-small` on a subsample for fast iteration.
+3. Save model and tokenizer, then publish the checkpoint on Hugging Face.
+4. Use the Gradio app to generate headlines from fresh input text.
+5. Review run details directly in the UI.
 
 ## Local Setup
 
@@ -56,12 +76,9 @@ pip install -r requirements.txt
 python3 app.py
 ```
 
-## Train Locally
+Quick training run (subsample):
 
 ```bash
 pip install -r requirements-train.txt
-python3 train.py --train_samples 10000 --validation_samples 1000 --num_train_epochs 1
+python3 train.py --dataset_id SalmanFaroz/gigaword --train_samples 4000 --validation_samples 300 --max_steps 70
 ```
-
-The app automatically loads `outputs/saved_model` if present.
-In Space, `HEADLINE_MODEL_ID` is set to the published fine-tuned model repo above.
