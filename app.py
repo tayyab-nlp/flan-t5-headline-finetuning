@@ -11,8 +11,7 @@ from inference import generate_headline
 
 APP_TITLE = "FLAN-T5 Fine-Tuning for News-to-Headline Generation"
 APP_SUBTITLE = (
-    "Convert news sentences into concise headlines using a FLAN-T5 model "
-    "(fine-tuned checkpoint if available, otherwise base FLAN-T5-small)."
+    "Convert news sentences into concise headlines using a FLAN-T5 model fine-tuned on Gigaword."
 )
 
 APP_CSS = """
