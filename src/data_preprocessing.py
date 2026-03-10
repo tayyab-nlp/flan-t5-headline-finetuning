@@ -13,7 +13,7 @@ PREFIX = "headline: "
 
 def format_example(example: Dict[str, str]) -> Dict[str, str]:
     """Convert Gigaword row into FLAN-T5 seq2seq format."""
-    source = cleanup_text(example.get("document"))
+    source = cleanup_text(example.get("article"))
     target = cleanup_text(example.get("summary"))
     return {
         "input_text": f"{PREFIX}{source}",
@@ -22,12 +22,13 @@ def format_example(example: Dict[str, str]) -> Dict[str, str]:
 
 
 def load_gigaword_splits(
+    dataset_id: str = "SalmanFaroz/gigaword",
     train_samples: int = 10000,
     validation_samples: int = 1000,
     seed: int = 42,
 ) -> Dict[str, Dataset]:
     """Load and optionally downsample Gigaword train/validation splits."""
-    dataset = load_dataset("gigaword")
+    dataset = load_dataset(dataset_id)
 
     train_ds = dataset["train"]
     val_ds = dataset["validation"]

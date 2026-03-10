@@ -1,6 +1,7 @@
 # FLAN-T5 Fine-Tuning for News-to-Headline Generation
 
 Space Demo Link: [https://vtayyab6-flan-t5-headline-finetuning.hf.space](https://vtayyab6-flan-t5-headline-finetuning.hf.space)
+Fine-Tuned Model: [https://huggingface.co/vtayyab6/flan-t5-small-gigaword-headline-ft](https://huggingface.co/vtayyab6/flan-t5-small-gigaword-headline-ft)
 
 Fine-tune FLAN-T5-Small on Gigaword to convert news-style input text into concise headline outputs, then serve it through a fast Gradio interface.
 
@@ -15,6 +16,7 @@ Fine-tune FLAN-T5-Small on Gigaword to convert news-style input text into concis
 | Inference | Reusable `generate_headline()` pipeline in `inference.py` |
 | UI | Gradio app with input box, generate button, examples, and decoding controls |
 | Deployment | Hugging Face Spaces ready |
+| Fine-tuned outputs in repo | `outputs/training_summary.json` and `outputs/sample_predictions.json` |
 
 ## Project Structure
 
@@ -38,7 +40,7 @@ flan-t5-headline-finetuning/
 
 ## How It Works
 
-1. Load Gigaword (`document`, `summary`).
+1. Load Gigaword (`article`, `summary`) from `SalmanFaroz/gigaword`.
 2. Format input as `headline: <news text>` and target as `<headline>`.
 3. Fine-tune FLAN-T5-Small.
 4. Save model and tokenizer to `outputs/saved_model`.
@@ -62,3 +64,4 @@ python3 train.py --train_samples 10000 --validation_samples 1000 --num_train_epo
 ```
 
 The app automatically loads `outputs/saved_model` if present.
+In Space, `HEADLINE_MODEL_ID` is set to the published fine-tuned model repo above.

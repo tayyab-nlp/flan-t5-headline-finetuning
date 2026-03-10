@@ -1,0 +1,102 @@
+[
+  {
+    "input_text": "headline: in a blow to his attorney 's efforts to win a reduced prison sentence , a court-ordered brain scan revealed no abnormalities that might explain the behavior of lionel tate , once the youngest person in modern u.s. history to be sentenced to life in prison .",
+    "target_text": "tate brain scan shows no abnormalities",
+    "prediction": "lionel tate 's brain scan shows no abnormalities"
+  },
+  {
+    "input_text": "headline: the eldest daughter of former chilean dictator augusto pinochet was arrested at a washington airport after fleeing chile where she has been charged with tax fraud , a government spokesman said wednesday .",
+    "target_text": "pinochet 's daughter arrested in washington",
+    "prediction": "eldest daughter of chilean dictator arrested at washington airport"
+  },
+  {
+    "input_text": "headline: a rights group said thursday that bangladesh should be expelled from the u.n. human rights council and be banned from taking part in peacekeeping missions until it addresses abuses by the nation 's police and security agencies .",
+    "target_text": "rights group urges expulsion of bangladesh from un human rights council",
+    "prediction": "bangladesh should be expelled from u.n. human rights council"
+  },
+  {
+    "input_text": "headline: egyptian police tortured moslem militants to force them to confess to the attempted assassination of interior minister hassan al-alfi , defense lawyers charged .",
+    "target_text": "police tortured defendants in UNK trial lawyers say",
+    "prediction": "egyptian police torture moslem militants"
+  },
+  {
+    "input_text": "headline: swedish automaker volvo car sold ###,### cars last year , down #.# percent from the previous year , the firm announced on tuesday .",
+    "target_text": "volvo car sales slip #.# percent in ####",
+    "prediction": "volvo sells ###,### cars down #.# percent"
+  },
+  {
+    "input_text": "headline: the world bank has agreed a ## million dollar grant to west bank and gaza for emergency service and community development needs , according to a statement released by the bank on friday .",
+    "target_text": "world bank lends ## million dollars to palestinians",
+    "prediction": "world bank agrees ## million dollar grant to west bank gaza"
+  },
+  {
+    "input_text": "headline: two south korean workers were killed and nine others were injured on wednesday by a blast at an explosives factory in southeastern south korea , the police said .",
+    "target_text": "two killed # injured in explosion in south korea",
+    "prediction": "two south korean workers killed and nine injured"
+  },
+  {
+    "input_text": "headline: norway said friday it would ensure that aid reaches people suffering from the conflict in sri lanka , after rebels appealed to the scandinavian nation to help civilians trapped by fighting over a disputed waterway .",
+    "target_text": "norway pledges to help civilians in sri lanka",
+    "prediction": "norway to ensure aid to sri lanka"
+  },
+  {
+    "input_text": "headline: president barack obama joined other leaders of the industrialized world wednesday in backing new targets for battling global warming .",
+    "target_text": "g-# leaders agree on climate target",
+    "prediction": "obama joins industrialized world leaders"
+  },
+  {
+    "input_text": "headline: myanmar , as an agricultural country , is in high demand for fertilizer to ensure increased production of agricultural crops .",
+    "target_text": "myanmar in serious shortage of fertilizer",
+    "prediction": "myanmar in high demand for fertilizer"
+  },
+  {
+    "input_text": "headline: the bush administration wednesday asked a federal court to dismiss a lawsuit brought by a wrestling coaches association that challenges how title ix , the law that bars sex discrimination in intercollegiate sports , is enforced .",
+    "target_text": "title ix lawsuit draws scrutiny",
+    "prediction": "bush asks federal court to dismiss sex discrimination lawsuit"
+  },
+  {
+    "input_text": "headline: telewest communications plc , the british cable television operator , said thursday it will wipe out ## percent of its jobs to shift its business strategy from building its system to selling it .",
+    "target_text": "british cable operator cuts #,### jobs",
+    "prediction": "telewest to wipe out ## percent of its jobs"
+  },
+  {
+    "input_text": "headline: two months after a huge cyanide spill in kyrgyzstan , a truck operated by the same company has been in another accident , this time involving toxic nitric acid , a news report said thursday .",
+    "target_text": "nitric acid spilled in kyrgyzstan",
+    "prediction": "two months after cyanide spill in kyrgyzstan"
+  },
+  {
+    "input_text": "headline: moving against `` international terrorism , '' authorities rounded up hundreds of islamic militants thursday as pakistani , u.s. and french investigators searched for any links between al-qaida and a bombing that killed ## french engineers and three pakistanis .",
+    "target_text": "dozens of militants arrested after bomb attack ; french defense",
+    "prediction": "u.s. and french investigators search for links between al-qaida bombing"
+  },
+  {
+    "input_text": "headline: at cost of ### million yuan -lrb- ##.# million dollars -rrb- , a UNK concentration plant was established recently in northwest china 's qinghai province following one year of construction and is believed to be the largest base of its kind ever built up in the country .",
+    "target_text": "china 's largest UNK concentration plant UNK UNK base built",
+    "prediction": "UNK concentration plant in qinghai"
+  },
+  {
+    "input_text": "headline: the european union head office 's standoff with the french government over paris ' proposed eur # billion -lrb- us$ #.# billion -rrb- bailout of troubled engineering giant alstom sa could drag on into the weekend , an eu spokesman said wednesday .",
+    "target_text": "eu commission talks to continue with french government over bailout to alstom",
+    "prediction": "eu spokesman says eu standoff with french government could drag on into weekend"
+  },
+  {
+    "input_text": "headline: the production and sale of UNK vehicles in brazil has reached two million units after more than three years on the market , according to the national motor vehicle manufacturers association , or anfavea .",
+    "target_text": "brazil 's output of flex-fuel vehicles reaches # million",
+    "prediction": "production of UNK vehicles in brazil reach two million units"
+  },
+  {
+    "input_text": "headline: more filipinos agreed with the government 's decision to pull out its troops from iraq for the release of filipino hostage angelo de la cruz , said a survey released thursday .",
+    "target_text": "more filipinos favor pullout decision",
+    "prediction": "more filipinos agree with iraq pullout"
+  },
+  {
+    "input_text": "headline: lawmakers in germany 's governing coalition aired their misgivings over a possible u.s. military strike against iraq on wednesday as berlin police prepared for renewed protests ahead of president george w. bush 's arrival .",
+    "target_text": "berlin prepares for bush arrival after first big protest goes",
+    "prediction": "german governing coalition airs misgivings over possible u.s. military strike"
+  },
+  {
+    "input_text": "headline: south korea 's giant pohang iron and steel co. -lrb- posco -rrb- will step in and help manage the failed hanbo steel and construction co. , at the request of its creditor banks , posco said tuesday .",
+    "target_text": "posco steps in to help manage hanbo steel",
+    "prediction": "s. korea 's giant pohang iron and steel will step in and help manage failed hanbo steel and construction"
+  }
+]

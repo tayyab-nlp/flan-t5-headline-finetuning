@@ -1,0 +1,12 @@
+{
+  "dataset_id": "SalmanFaroz/gigaword",
+  "model_name": "google/flan-t5-small",
+  "train_samples": 4000,
+  "validation_samples": 300,
+  "max_steps": 70,
+  "num_train_epochs": 1.0,
+  "train_runtime_sec": 14.7673,
+  "train_loss": 2.465707833426339,
+  "global_steps": 70,
+  "output_dir": "outputs/saved_model"
+}
